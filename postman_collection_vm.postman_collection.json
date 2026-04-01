@@ -1,0 +1,218 @@
+{
+  "info": {
+    "_postman_id": "f923dfd9-a2f3-42f4-aa7e-51520e9c0405",
+    "name": "postman_collection_vm",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53679743"
+  },
+  "item": [
+    {
+      "name": "Retorna todas las peliculas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5052/api/peliculas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5052",
+          "path": [
+            "api",
+            "peliculas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retorna peliculas por fecha",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5052/api/peliculas/estreno?fecha=2026-03-31",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5052",
+          "path": [
+            "api",
+            "peliculas",
+            "estreno"
+          ],
+          "query": [
+            {
+              "key": "fecha",
+              "value": "2026-03-31"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sala entre 3 a 5 peliculas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5052/api/peliculas/estado-sala?nombreSala=Sala%207%20-%20Umamusumes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5052",
+          "path": [
+            "api",
+            "peliculas",
+            "estado-sala"
+          ],
+          "query": [
+            {
+              "key": "nombreSala",
+              "value": "Sala%207%20-%20Umamusumes"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sala menor a 3 peliculas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5052/api/peliculas/estado-sala?nombreSala=Sala%201%20-%20IMAX",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5052",
+          "path": [
+            "api",
+            "peliculas",
+            "estado-sala"
+          ],
+          "query": [
+            {
+              "key": "nombreSala",
+              "value": "Sala%201%20-%20IMAX"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sala con mas de 5 peliculas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5052/api/peliculas/estado-sala?nombreSala=Sala%205%20-%20Infantil",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5052",
+          "path": [
+            "api",
+            "peliculas",
+            "estado-sala"
+          ],
+          "query": [
+            {
+              "key": "nombreSala",
+              "value": "Sala%205%20-%20Infantil"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Borrar pelicula por id",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5052/api/peliculas/17",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5052",
+          "path": [
+            "api",
+            "peliculas",
+            "17"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar pelicula por id",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"id_pelicula\": 15,\r\n  \"nombre\": \"Los pitufos 2\",\r\n  \"duracion\": 420,\r\n  \"estado\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5052/api/peliculas/15",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5052",
+          "path": [
+            "api",
+            "peliculas",
+            "15"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear nueva pelicula",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nombre\": \"Jumanji\",\r\n  \"duracion\": 130,\r\n  \"estado\": true\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5052/api/peliculas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5052",
+          "path": [
+            "api",
+            "peliculas"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

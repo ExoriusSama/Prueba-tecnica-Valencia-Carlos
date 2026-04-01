@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|c:\\users\\elpro\\source\\repos\\exam_tecnico_valencia\\cineapi\\controllers\\peliculascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|solutionrelative:cineapi\\controllers\\peliculascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|c:\\users\\elpro\\source\\repos\\exam_tecnico_valencia\\cineapi\\controllers\\pelicula_sala_cinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|solutionrelative:cineapi\\controllers\\pelicula_sala_cinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|c:\\users\\elpro\\source\\repos\\exam_tecnico_valencia\\cineapi\\models\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|solutionrelative:cineapi\\models\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "peliculasController.cs",
+              "DocumentMoniker": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\Controllers\\peliculasController.cs",
+              "RelativeDocumentMoniker": "CineApi\\Controllers\\peliculasController.cs",
+              "ToolTip": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\Controllers\\peliculasController.cs",
+              "RelativeToolTip": "CineApi\\Controllers\\peliculasController.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAAAiwMcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T13:48:40.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "pelicula_sala_cineController.cs",
+              "DocumentMoniker": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\Controllers\\pelicula_sala_cineController.cs",
+              "RelativeDocumentMoniker": "CineApi\\Controllers\\pelicula_sala_cineController.cs",
+              "ToolTip": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\Controllers\\pelicula_sala_cineController.cs",
+              "RelativeToolTip": "CineApi\\Controllers\\pelicula_sala_cineController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T13:48:32.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "pelicula.cs",
+              "DocumentMoniker": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\Models\\pelicula.cs",
+              "RelativeDocumentMoniker": "CineApi\\Models\\pelicula.cs",
+              "ToolTip": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\Models\\pelicula.cs",
+              "RelativeToolTip": "CineApi\\Models\\pelicula.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T13:40:50.55Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
