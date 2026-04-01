@@ -1,0 +1,137 @@
+.cineapp-toolbar {
+  background-color: #f8fafc !important;   /* Fondo claro suave */
+  color: #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  height: 64px;
+  padding: 0 32px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.logo-icon {
+  font-size: 1.85rem;
+}
+
+.logo-text {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.4px;
+}
+
+/* Navegación */
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 4px;
+  background-color: #f1f5f9;
+  padding: 4px;
+  border-radius: 9999px;        /* Efecto pill como en Material */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+  color: #64748b;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #334155;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-link.active {
+  background-color: white;
+  color: #4338ca;           /* Morado suave elegante */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+/* Usuario */
+.user-section mat-icon {
+  font-size: 26px;
+  width: 26px;
+  height: 26px;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.user-section mat-icon:hover {
+  color: #4338ca;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-link {
+    padding: 9px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.user-section button {
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.user-section mat-icon {
+  font-size: 26px;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.user-section mat-icon:hover {
+  color: #ef4444;
+}
+.logout-icon {
+  font-size: 26px;
+  color: #ef4444;
+  transition: all 0.2s ease;
+}
+
+.logout-icon:hover {
+  color: #dc2626;
+  transform: scale(1.1);
+}
+.user-section button:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-radius: 50%;
+}
+.logout-btn {
+  color: #ef4444;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  color: #dc2626;
+  background-color: rgba(239, 68, 68, 0.1);
+  border-radius: 8px;
+}

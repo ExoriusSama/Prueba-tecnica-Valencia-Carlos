@@ -1,0 +1,48 @@
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow-lg p-5 rounded-5" style="max-width: 400px; width: 100%; border: none;">
+    <div class="text-center mb-4">
+      <h2 class="mb-1"> CineWeb VM</h2>
+      <p class="text-muted">Inicia sesión para continuar</p>
+    </div>
+
+    <form (ngSubmit)="login()">
+      <div class="mb-3">
+        <label for="usuario" class="form-label fw-semibold">Usuario</label>
+        <input
+          type="text"
+          id="usuario"
+          class="form-control form-control-lg shadow-sm"
+          [(ngModel)]="usuario"
+          name="usuario"
+          placeholder="Ingresa tu usuario"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label fw-semibold">Contraseña</label>
+        <input
+          type="password"
+          id="password"
+          class="form-control form-control-lg shadow-sm"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Ingresa tu contraseña"
+          required
+        />
+      </div>
+
+      <div *ngIf="mensaje" class="alert alert-danger py-2 text-center shadow-sm">
+        {{ mensaje }}
+      </div>
+
+      <button type="submit" class="btn btn-gradient btn-lg w-100 mt-3">
+        Ingresar
+      </button>
+    </form>
+
+    <div class="text-center mt-4 text-muted">
+      <small>Usuario demo: admin | Contraseña: 1234</small>
+    </div>
+  </div>
+</div>

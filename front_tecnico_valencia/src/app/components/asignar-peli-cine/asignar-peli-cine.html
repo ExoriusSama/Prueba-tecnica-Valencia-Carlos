@@ -1,0 +1,149 @@
+<app-menu></app-menu>
+<div class="container mt-5" style="background-color: #f8f1f9; min-height: 100vh; padding-bottom: 60px;">
+
+  <!-- Título -->
+  <div class="text-center mb-5 pt-4">
+    <h1 class="display-5 fw-bold mb-2" style="color: #5e35b1;">
+      {{ isEdit ? 'Editar Asignación' : 'Nueva Asignación' }}
+    </h1>
+    <p class="text-muted fs-5">Gestiona la asignación de películas a salas</p>
+  </div>
+
+  <!-- Formulario -->
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-xl-6">
+      <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+        <div class="card-header py-3" style="background: linear-gradient(135deg, #7e57c2, #5e35b1); color: white;">
+          <h5 class="mb-0 fw-semibold">
+            <i class="bi bi-kanban-fill me-2"></i>
+            {{ isEdit ? 'Actualizar Asignación' : 'Registrar Nueva Asignación' }}
+          </h5>
+        </div>
+        <div class="card-body p-5">
+          <form (ngSubmit)="guardarAsignacion()" class="needs-validation" novalidate>
+
+            <div class="mb-4">
+              <label class="form-label fw-semibold">Película</label>
+              <select class="form-select form-select-lg" [(ngModel)]="asignacionModel.id_pelicula" name="id_pelicula"
+                required>
+                <option value="" disabled>Seleccione una película</option>
+                <option *ngFor="let peli of peliculas" [value]="peli.id_pelicula">{{ peli.nombre }}</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-semibold">Sala de Cine</label>
+              <select class="form-select form-select-lg" [(ngModel)]="asignacionModel.id_sala" name="id_sala" required>
+                <option value="" disabled>Seleccione una sala</option>
+                <option *ngFor="let sala of salas" [value]="sala.id_sala">{{ sala.nombre }}</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-semibold">Fecha Publicación</label>
+              <input type="date" class="form-control form-control-lg" [(ngModel)]="asignacionModel.fecha_publicacion"
+                name="fecha_publicacion" required>
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-semibold">Fecha Fin</label>
+              <input type="date" class="form-control form-control-lg" [(ngModel)]="asignacionModel.fecha_fin"
+                name="fecha_fin" required>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4" (click)="limpiar()">
+                <i class="bi bi-x-circle"></i> Cancelar
+              </button>
+              <button type="submit" class="btn btn-lg px-5 shadow-sm"
+                style="background-color: #5e35b1; border-color: #5e35b1; color: white;">
+                <i class="bi bi-check2-circle"></i> {{ isEdit ? 'Actualizar' : 'Guardar' }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Tabla de asignaciones -->
+  <div class="mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="fw-bold text-dark mb-0">
+        <i class="bi bi-list-ul me-2"></i> Asignaciones Existentes
+      </h3>
+      <span class="badge rounded-pill px-3 py-2" style="background-color: #d1c4e9; color: #4527a0; font-size: 1rem;">
+        {{ asignaciones.length }} asignaciones
+      </span>
+    </div>
+
+      <!-- Buscador -->
+  <div class="mb-4">
+    <div class="input-group input-group-lg">
+      <span class="input-group-text" style="background-color: #ede7f6;">
+        <i class="bi bi-search" style="color: #5e35b1;"></i>
+      </span>
+      <input type="text" class="form-control" placeholder="Buscar por película o sala..." [(ngModel)]="searchText"
+        style="border-left: none;">
+    </div>
+  </div>
+
+    <div class="card shadow border-0 rounded-4 overflow-hidden">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead style="background-color: #f3e8ff;">
+            <tr>
+              <th class="ps-4">ID</th>
+              <th>Película</th>
+              <th>Sala</th>
+              <th class="text-center">Fecha Publicación</th>
+              <th class="text-center">Fecha Fin</th>
+              <th class="text-center">Estado</th>
+              <th class="text-end pe-4">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let asig of asignacionesFiltradas()" [class.table-light]="!asig.estado">
+              <td class="ps-4 fw-medium">{{ asig.id_pelicula_sala }}</td>
+              <td>{{ getNombrePelicula(asig.id_pelicula) }}</td>
+              <td>{{ getNombreSala(asig.id_sala) }}</td>
+              <td class="text-center">
+                <span class="badge px-3 py-2 fs-6" style="background-color: #e3d9f7; color: #5e35b1;">{{
+                  asig.fecha_publicacion }}</span>
+              </td>
+              <td class="text-center">
+                <span class="badge px-3 py-2 fs-6" style="background-color: #e3d9f7; color: #5e35b1;">{{ asig.fecha_fin
+                  }}</span>
+              </td>
+              <td class="text-center">
+                <span class="badge px-3 py-2 fs-6" [style.background-color]="asig.estado ? '#c3f1d8' : '#ffebee'"
+                  [style.color]="asig.estado ? '#1e8a5e' : '#c62828'">
+                  {{ asig.estado ? 'Activo' : 'Inactivo' }}
+                </span>
+              </td>
+              <td class="text-end pe-4">
+                <button class="btn btn-sm me-2" style="background-color: #e3d9f7; color: #5e35b1; border: none;"
+                  (click)="editarAsignacion(asig)" [disabled]="!asig.estado" title="Editar asignación">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button class="btn btn-sm" style="background-color: #ffebee; color: #c62828; border: none;"
+                  (click)="eliminarAsignacion(asig)" [disabled]="!asig.estado" title="Eliminar asignación">
+                  <i class="bi bi-trash3"></i>
+                </button>
+              </td>
+            </tr>
+
+            <!-- Mensaje cuando no hay asignaciones -->
+            <tr *ngIf="asignaciones.length === 0">
+              <td colspan="7" class="text-center py-5 text-muted">
+                <i class="bi bi-inbox display-1 d-block mb-3 opacity-50"></i>
+                <p class="mb-0 fs-5">Aún no hay asignaciones registradas</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

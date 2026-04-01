@@ -1,0 +1,42 @@
+<app-menu></app-menu>
+
+<div class="container mt-5">
+<h2 class="text-center mb-5 mt-3" style="color: #5e35b1;">
+  Dashboard del Cine
+</h2>
+
+  <div class="row g-4">
+    <!-- Total de Salas-->
+    <div class="col-md-4">
+      <div class="card text-white h-100" style="background-color: #b19cd9;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Total de Salas</h5>
+          <p class="display-4">{{ totalSalas }}</p>
+          <i class="bi bi-building" style="font-size: 2rem;"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Salas Disponibles -->
+    <div class="col-md-4">
+      <div class="card text-white h-100" style="background-color: #8fbc8f;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Salas Disponibles</h5>
+          <p class="display-4">{{ salasDisponibles }}</p>
+          <i class="bi bi-check-circle" style="font-size: 2rem;"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total de Películas -->
+    <div class="col-md-4">
+      <div class="card text-white h-100" style="background-color: #87ceeb;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Total de Películas</h5>
+          <p class="display-4">{{ totalPeliculas }}</p>
+          <i class="bi bi-film" style="font-size: 2rem;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

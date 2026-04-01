@@ -1,0 +1,37 @@
+<mat-toolbar class="cineapp-toolbar">
+  <div class="logo">
+    <span class="logo-icon">&lt;3</span>
+    <span class="logo-text">CineWeb VM</span>
+  </div>
+
+  <!-- Navegación -->
+  <nav class="nav-center">
+    <ul class="nav-list">
+      <li>
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/salas" routerLinkActive="active">
+          CRUD Salas
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/peliculas" routerLinkActive="active">
+          CRUD Películas
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/asignar-peli-cine" routerLinkActive="active">
+          CRUD Cartelera
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="user-section">
+    <button mat-button class="logout-btn" (click)="cerrarSesion()">
+      EXIT
+    </button>
+  </div>

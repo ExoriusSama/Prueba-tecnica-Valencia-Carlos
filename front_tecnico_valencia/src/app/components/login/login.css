@@ -1,0 +1,48 @@
+body {
+  background: linear-gradient(135deg, #8e44ad, #6a0dad);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  background-color: #e2d8e2ee;
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+}
+
+h2 {
+  font-weight: 800;
+  color: #4b0082;
+  letter-spacing: 1px;
+}
+
+.form-control {
+  border-radius: 1rem;
+  border: 1px solid #d1c4e9;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: #7b5fcf;
+  box-shadow: 0 0 10px rgba(123, 95, 207, 0.3);
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #7b5fcf, #9b59b6);
+  border: none;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #9b59b6, #7b5fcf);
+  box-shadow: 0 5px 15px rgba(155, 89, 182, 0.4);
+}
+
+.alert {
+  border-radius: 1rem;
+}
+
+.text-muted {
+  color: #6c3483 !important;
+}
