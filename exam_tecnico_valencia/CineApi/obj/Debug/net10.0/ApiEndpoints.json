@@ -1,102 +1,35 @@
 [
   {
-    "ContainingType": "CineApi.Controllers.pelicula_sala_cineController",
-    "Method": "Getpelicula_sala_cines",
-    "RelativePath": "api/pelicula_sala_cine",
+    "ContainingType": "CineApi.Controllers.PeliculasController",
+    "Method": "Get",
+    "RelativePath": "api/Peliculas",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CineApi.Models.pelicula_sala_cine, CineApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineApi.Controllers.pelicula_sala_cineController",
-    "Method": "Postpelicula_sala_cine",
-    "RelativePath": "api/pelicula_sala_cine",
+    "ContainingType": "CineApi.Controllers.PeliculasController",
+    "Method": "Post",
+    "RelativePath": "api/Peliculas",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "pelicula_sala_cine",
-        "Type": "CineApi.Models.pelicula_sala_cine",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "CineApi.Models.pelicula_sala_cine",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CineApi.Controllers.pelicula_sala_cineController",
-    "Method": "Getpelicula_sala_cine",
-    "RelativePath": "api/pelicula_sala_cine/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "CineApi.Models.pelicula_sala_cine",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CineApi.Controllers.pelicula_sala_cineController",
-    "Method": "Putpelicula_sala_cine",
-    "RelativePath": "api/pelicula_sala_cine/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "pelicula_sala_cine",
-        "Type": "CineApi.Models.pelicula_sala_cine",
+        "Name": "dto",
+        "Type": "CineApi.DTO.PeliculaDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CineApi.Controllers.pelicula_sala_cineController",
-    "Method": "Deletepelicula_sala_cine",
-    "RelativePath": "api/pelicula_sala_cine/{id}",
-    "HttpMethod": "DELETE",
+    "ContainingType": "CineApi.Controllers.PeliculasController",
+    "Method": "Get",
+    "RelativePath": "api/Peliculas/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -109,97 +42,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CineApi.Controllers.peliculasController",
-    "Method": "Getpeliculas",
-    "RelativePath": "api/peliculas",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CineApi.Models.pelicula, CineApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CineApi.Controllers.peliculasController",
-    "Method": "Postpelicula",
-    "RelativePath": "api/peliculas",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "pelicula",
-        "Type": "CineApi.Models.pelicula",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "CineApi.Models.pelicula",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CineApi.Controllers.peliculasController",
-    "Method": "Deletepelicula",
-    "RelativePath": "api/peliculas/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CineApi.Controllers.peliculasController",
-    "Method": "Getpelicula",
-    "RelativePath": "api/peliculas/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "CineApi.Models.pelicula",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CineApi.Controllers.peliculasController",
-    "Method": "Putpelicula",
-    "RelativePath": "api/peliculas/{id}",
+    "ContainingType": "CineApi.Controllers.PeliculasController",
+    "Method": "Put",
+    "RelativePath": "api/Peliculas/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -218,9 +63,25 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CineApi.Controllers.peliculasController",
-    "Method": "BuscarPorNombre",
-    "RelativePath": "api/peliculas/buscar",
+    "ContainingType": "CineApi.Controllers.PeliculasController",
+    "Method": "Delete",
+    "RelativePath": "api/Peliculas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineApi.Controllers.PeliculasController",
+    "Method": "Buscar",
+    "RelativePath": "api/Peliculas/buscar",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -231,22 +92,12 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CineApi.Models.pelicula, CineApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineApi.Controllers.peliculasController",
-    "Method": "GetEstadoSala",
-    "RelativePath": "api/peliculas/estado-sala",
+    "ContainingType": "CineApi.Controllers.PeliculasController",
+    "Method": "EstadoSala",
+    "RelativePath": "api/Peliculas/estado-sala",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -260,9 +111,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CineApi.Controllers.peliculasController",
-    "Method": "GetPeliculasPorEstreno",
-    "RelativePath": "api/peliculas/estreno",
+    "ContainingType": "CineApi.Controllers.PeliculasController",
+    "Method": "Estreno",
+    "RelativePath": "api/Peliculas/estreno",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -273,68 +124,38 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[System.Object, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineApi.Controllers.sala_cineController",
-    "Method": "Getsala_cines",
-    "RelativePath": "api/sala_cine",
+    "ContainingType": "CineApi.Controllers.PeliculaSalaCineController",
+    "Method": "Get",
+    "RelativePath": "api/PeliculaSalaCine",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CineApi.Models.sala_cine, CineApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineApi.Controllers.sala_cineController",
-    "Method": "Postsala_cine",
-    "RelativePath": "api/sala_cine",
+    "ContainingType": "CineApi.Controllers.PeliculaSalaCineController",
+    "Method": "Post",
+    "RelativePath": "api/PeliculaSalaCine",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "sala_cine",
-        "Type": "CineApi.Models.sala_cine",
+        "Name": "dto",
+        "Type": "CineApi.DTO.PeliculaSalaDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CineApi.Models.sala_cine",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineApi.Controllers.sala_cineController",
-    "Method": "Getsala_cine",
-    "RelativePath": "api/sala_cine/{id}",
+    "ContainingType": "CineApi.Controllers.PeliculaSalaCineController",
+    "Method": "Get",
+    "RelativePath": "api/PeliculaSalaCine/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -345,22 +166,12 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "CineApi.Models.sala_cine",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
-    "ContainingType": "CineApi.Controllers.sala_cineController",
-    "Method": "Putsala_cine",
-    "RelativePath": "api/sala_cine/{id}",
+    "ContainingType": "CineApi.Controllers.PeliculaSalaCineController",
+    "Method": "Put",
+    "RelativePath": "api/PeliculaSalaCine/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -371,17 +182,96 @@
         "IsRequired": true
       },
       {
-        "Name": "sala_cine",
-        "Type": "CineApi.Models.sala_cine",
+        "Name": "dto",
+        "Type": "CineApi.DTO.PeliculaSalaDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "CineApi.Controllers.sala_cineController",
-    "Method": "Deletesala_cine",
-    "RelativePath": "api/sala_cine/{id}",
+    "ContainingType": "CineApi.Controllers.PeliculaSalaCineController",
+    "Method": "Delete",
+    "RelativePath": "api/PeliculaSalaCine/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineApi.Controllers.SalaCineController",
+    "Method": "Get",
+    "RelativePath": "api/SalaCine",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineApi.Controllers.SalaCineController",
+    "Method": "Post",
+    "RelativePath": "api/SalaCine",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SalaCineDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineApi.Controllers.SalaCineController",
+    "Method": "Get",
+    "RelativePath": "api/SalaCine/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineApi.Controllers.SalaCineController",
+    "Method": "Put",
+    "RelativePath": "api/SalaCine/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "SalaCineDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CineApi.Controllers.SalaCineController",
+    "Method": "Delete",
+    "RelativePath": "api/SalaCine/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

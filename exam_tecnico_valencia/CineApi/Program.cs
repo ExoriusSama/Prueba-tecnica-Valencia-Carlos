@@ -1,4 +1,6 @@
 using CineApi.Contexts;
+using CineApi.Repository;
+using CineApi.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,19 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//llamar a los servicios de pelicula
+builder.Services.AddScoped<IPeliculaRepository, PeliculaRepository>();
+builder.Services.AddScoped<IPeliculaService, PeliculaService>();
+
+//llamar a los servicios de sala_cine
+builder.Services.AddScoped<ISalaCineRepository, SalaCineRepository>();
+builder.Services.AddScoped<ISalaCineService, SalaCineService>();
+
+//llamar a los servicios de Pelicula sala cine
+builder.Services.AddScoped<IPeliculaSalaRepository, PeliculaSalaRepository>();
+builder.Services.AddScoped<IPeliculaSalaService, PeliculaSalaService>();
+
 // Configuración de la conexión a la base de datos
 builder.Services.AddDbContext<CineContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

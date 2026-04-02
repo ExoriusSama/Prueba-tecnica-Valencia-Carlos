@@ -5,94 +5,51 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/pelicula_sala_cine": {
+    "/api/Peliculas": {
       "get": {
         "tags": [
-          "pelicula_sala_cine"
+          "Peliculas"
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/pelicula_sala_cine"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/pelicula_sala_cine"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/pelicula_sala_cine"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
       "post": {
         "tags": [
-          "pelicula_sala_cine"
+          "Peliculas"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/pelicula_sala_cine"
+                "$ref": "#/components/schemas/PeliculaDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/pelicula_sala_cine"
+                "$ref": "#/components/schemas/PeliculaDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/pelicula_sala_cine"
+                "$ref": "#/components/schemas/PeliculaDTO"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/pelicula_sala_cine"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/pelicula_sala_cine"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/pelicula_sala_cine"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
     },
-    "/api/pelicula_sala_cine/{id}": {
+    "/api/Peliculas/{id}": {
       "get": {
         "tags": [
-          "pelicula_sala_cine"
+          "Peliculas"
         ],
         "parameters": [
           {
@@ -107,30 +64,13 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/pelicula_sala_cine"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/pelicula_sala_cine"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/pelicula_sala_cine"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
       "put": {
         "tags": [
-          "pelicula_sala_cine"
+          "Peliculas"
         ],
         "parameters": [
           {
@@ -147,17 +87,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/pelicula_sala_cine"
+                "$ref": "#/components/schemas/pelicula"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/pelicula_sala_cine"
+                "$ref": "#/components/schemas/pelicula"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/pelicula_sala_cine"
+                "$ref": "#/components/schemas/pelicula"
               }
             }
           }
@@ -170,7 +110,7 @@
       },
       "delete": {
         "tags": [
-          "pelicula_sala_cine"
+          "Peliculas"
         ],
         "parameters": [
           {
@@ -190,94 +130,10 @@
         }
       }
     },
-    "/api/peliculas": {
+    "/api/Peliculas/buscar": {
       "get": {
         "tags": [
-          "peliculas"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/pelicula"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/pelicula"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/pelicula"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "peliculas"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/pelicula"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/pelicula"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/pelicula"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/pelicula"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/pelicula"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/pelicula"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/peliculas/buscar": {
-      "get": {
-        "tags": [
-          "peliculas"
+          "Peliculas"
         ],
         "parameters": [
           {
@@ -290,41 +146,15 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/pelicula"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/pelicula"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/pelicula"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
     },
-    "/api/peliculas/estreno": {
+    "/api/Peliculas/estreno": {
       "get": {
         "tags": [
-          "peliculas"
+          "Peliculas"
         ],
         "parameters": [
           {
@@ -337,35 +167,15 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": { }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": { }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": { }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
     },
-    "/api/peliculas/estado-sala": {
+    "/api/Peliculas/estado-sala": {
       "get": {
         "tags": [
-          "peliculas"
+          "Peliculas"
         ],
         "parameters": [
           {
@@ -383,195 +193,51 @@
         }
       }
     },
-    "/api/peliculas/{id}": {
-      "delete": {
+    "/api/PeliculaSalaCine": {
+      "get": {
         "tags": [
-          "peliculas"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
+          "PeliculaSalaCine"
         ],
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "peliculas"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/pelicula"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/pelicula"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/pelicula"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "peliculas"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/pelicula"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/pelicula"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/pelicula"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/sala_cine": {
-      "get": {
-        "tags": [
-          "sala_cine"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/sala_cine"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/sala_cine"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/sala_cine"
-                  }
-                }
-              }
-            }
           }
         }
       },
       "post": {
         "tags": [
-          "sala_cine"
+          "PeliculaSalaCine"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/sala_cine"
+                "$ref": "#/components/schemas/PeliculaSalaDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/sala_cine"
+                "$ref": "#/components/schemas/PeliculaSalaDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/sala_cine"
+                "$ref": "#/components/schemas/PeliculaSalaDTO"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/sala_cine"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/sala_cine"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/sala_cine"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
     },
-    "/api/sala_cine/{id}": {
+    "/api/PeliculaSalaCine/{id}": {
       "get": {
         "tags": [
-          "sala_cine"
+          "PeliculaSalaCine"
         ],
         "parameters": [
           {
@@ -586,30 +252,13 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/sala_cine"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/sala_cine"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/sala_cine"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       },
       "put": {
         "tags": [
-          "sala_cine"
+          "PeliculaSalaCine"
         ],
         "parameters": [
           {
@@ -626,17 +275,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/sala_cine"
+                "$ref": "#/components/schemas/PeliculaSalaDTO"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/sala_cine"
+                "$ref": "#/components/schemas/PeliculaSalaDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/sala_cine"
+                "$ref": "#/components/schemas/PeliculaSalaDTO"
               }
             }
           }
@@ -649,7 +298,132 @@
       },
       "delete": {
         "tags": [
-          "sala_cine"
+          "PeliculaSalaCine"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SalaCine": {
+      "get": {
+        "tags": [
+          "SalaCine"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "SalaCine"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaCineDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaCineDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaCineDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/SalaCine/{id}": {
+      "get": {
+        "tags": [
+          "SalaCine"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "SalaCine"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaCineDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaCineDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalaCineDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "SalaCine"
         ],
         "parameters": [
           {
@@ -711,6 +485,71 @@
   },
   "components": {
     "schemas": {
+      "PeliculaDTO": {
+        "required": [
+          "nombre"
+        ],
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "maxLength": 150,
+            "minLength": 1,
+            "type": "string"
+          },
+          "duracion": {
+            "maximum": 1000,
+            "minimum": 1,
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PeliculaSalaDTO": {
+        "required": [
+          "fechaFin",
+          "fechaPublicacion",
+          "idPelicula",
+          "idSala"
+        ],
+        "type": "object",
+        "properties": {
+          "idPelicula": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idSala": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaPublicacion": {
+            "type": "string",
+            "format": "date"
+          },
+          "fechaFin": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalaCineDTO": {
+        "required": [
+          "nombre"
+        ],
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "estado": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {
@@ -790,42 +629,18 @@
           }
         },
         "additionalProperties": false
-      },
-      "sala_cine": {
-        "type": "object",
-        "properties": {
-          "id_sala": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombre": {
-            "type": "string",
-            "nullable": true
-          },
-          "estado": {
-            "type": "boolean"
-          },
-          "pelicula_sala_cines": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/pelicula_sala_cine"
-            },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
       }
     }
   },
   "tags": [
     {
-      "name": "pelicula_sala_cine"
+      "name": "Peliculas"
     },
     {
-      "name": "peliculas"
+      "name": "PeliculaSalaCine"
     },
     {
-      "name": "sala_cine"
+      "name": "SalaCine"
     },
     {
       "name": "WeatherForecast"

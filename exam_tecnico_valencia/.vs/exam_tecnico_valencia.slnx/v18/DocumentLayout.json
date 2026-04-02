@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\",
+  "WorkspaceRootPath": "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|c:\\users\\elpro\\source\\repos\\exam_tecnico_valencia\\cineapi\\controllers\\peliculascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|solutionrelative:cineapi\\controllers\\peliculascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|c:\\users\\elpro\\desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\cineapi\\models\\pelicula_sala_cine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|solutionrelative:cineapi\\models\\pelicula_sala_cine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|c:\\users\\elpro\\source\\repos\\exam_tecnico_valencia\\cineapi\\controllers\\pelicula_sala_cinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|solutionrelative:cineapi\\controllers\\pelicula_sala_cinecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|c:\\users\\elpro\\source\\repos\\exam_tecnico_valencia\\cineapi\\models\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|c:\\users\\elpro\\desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\cineapi\\models\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|solutionrelative:cineapi\\models\\pelicula.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|c:\\users\\elpro\\desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\cineapi\\dto\\salacinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B177D43-1721-884B-1975-D553D0C1CA66}|CineApi\\CineApi.csproj|solutionrelative:cineapi\\dto\\salacinedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,39 +27,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "peliculasController.cs",
-              "DocumentMoniker": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\Controllers\\peliculasController.cs",
-              "RelativeDocumentMoniker": "CineApi\\Controllers\\peliculasController.cs",
-              "ToolTip": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\Controllers\\peliculasController.cs",
-              "RelativeToolTip": "CineApi\\Controllers\\peliculasController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA1AAAAAAAAAA==",
+              "Title": "Pelicula_Sala_Cine.cs",
+              "DocumentMoniker": "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\CineApi\\Models\\Pelicula_Sala_Cine.cs",
+              "RelativeDocumentMoniker": "CineApi\\Models\\Pelicula_Sala_Cine.cs",
+              "ToolTip": "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\CineApi\\Models\\Pelicula_Sala_Cine.cs",
+              "RelativeToolTip": "CineApi\\Models\\Pelicula_Sala_Cine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T13:48:40.881Z",
+              "WhenOpened": "2026-04-02T20:08:59.508Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "pelicula_sala_cineController.cs",
-              "DocumentMoniker": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\Controllers\\pelicula_sala_cineController.cs",
-              "RelativeDocumentMoniker": "CineApi\\Controllers\\pelicula_sala_cineController.cs",
-              "ToolTip": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\Controllers\\pelicula_sala_cineController.cs",
-              "RelativeToolTip": "CineApi\\Controllers\\pelicula_sala_cineController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Title": "Pelicula.cs",
+              "DocumentMoniker": "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\CineApi\\Models\\Pelicula.cs",
+              "RelativeDocumentMoniker": "CineApi\\Models\\Pelicula.cs",
+              "ToolTip": "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\CineApi\\Models\\Pelicula.cs",
+              "RelativeToolTip": "CineApi\\Models\\Pelicula.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T13:48:32.017Z"
+              "WhenOpened": "2026-04-02T20:08:36.476Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "pelicula.cs",
-              "DocumentMoniker": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\Models\\pelicula.cs",
-              "RelativeDocumentMoniker": "CineApi\\Models\\pelicula.cs",
-              "ToolTip": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\Models\\pelicula.cs",
-              "RelativeToolTip": "CineApi\\Models\\pelicula.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "SalaCineDTO.cs",
+              "DocumentMoniker": "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\CineApi\\DTO\\SalaCineDTO.cs",
+              "RelativeDocumentMoniker": "CineApi\\DTO\\SalaCineDTO.cs",
+              "ToolTip": "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\CineApi\\DTO\\SalaCineDTO.cs",
+              "RelativeToolTip": "CineApi\\DTO\\SalaCineDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-01T13:40:50.55Z"
+              "WhenOpened": "2026-04-02T19:48:53.359Z",
+              "EditorCaption": ""
             }
           ]
         }

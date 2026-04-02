@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\CineApi.csproj": {}
+    "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\CineApi\\CineApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\CineApi.csproj": {
+    "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\CineApi\\CineApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\CineApi.csproj",
+        "projectUniqueName": "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\CineApi\\CineApi.csproj",
         "projectName": "CineApi",
-        "projectPath": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\CineApi.csproj",
+        "projectPath": "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\CineApi\\CineApi.csproj",
         "packagesPath": "C:\\Users\\elpro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\obj\\",
+        "outputPath": "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\CineApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class ServCine {
   private peliculasUrl= 'http://localhost:5052/api/peliculas'
-  private salacineUrl= 'http://localhost:5052/api/sala_cine'
-  private asignarPeliCine= 'http://localhost:5052/api/pelicula_sala_cine'
+  private salacineUrl= 'http://localhost:5052/api/SalaCine'
+  private asignarPeliCine= 'http://localhost:5052/api/PeliculaSalaCine'
 
   constructor(private http: HttpClient) {}
 
@@ -73,8 +73,7 @@ export class ServCine {
     return this.http.put(`${this.asignarPeliCine}/${id}`, data);
   }
 
-  eliminarCartelera(id: number): Observable<any> {
-    return this.http.delete(`${this.asignarPeliCine}/${id}`);
-  }
-
+eliminarCartelera(id: number) {
+  return this.http.delete(`${this.asignarPeliCine}/${id}`);
+}
 }

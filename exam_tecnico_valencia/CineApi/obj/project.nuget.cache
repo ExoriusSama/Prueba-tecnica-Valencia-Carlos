@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ml12Vsz90EA=",
+  "dgSpecHash": "NSS+XH1IC7s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\elpro\\source\\repos\\exam_tecnico_valencia\\CineApi\\CineApi.csproj",
+  "projectFilePath": "C:\\Users\\elpro\\Desktop\\practicas angular\\exam_tecnico_vc\\exam_tecnico_valencia\\CineApi\\CineApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elpro\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\elpro\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

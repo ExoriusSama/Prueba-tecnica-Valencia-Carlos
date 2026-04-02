@@ -11,7 +11,7 @@ import { ServCine } from '../../Services/serv-cine';
   styleUrl: './asignar-peli-cine.css',
 })
 export class AsignarPeliCine implements OnInit {
-peliculas: any[] = [];
+  peliculas: any[] = [];
   salas: any[] = [];
   asignaciones: any[] = [];
   searchText: string = '';
@@ -26,104 +26,110 @@ peliculas: any[] = [];
   };
 
   isEdit: boolean = false;
-private cdr = inject(ChangeDetectorRef);
-  constructor(private api: ServCine) {}
+  private cdr = inject(ChangeDetectorRef);
+  constructor(private api: ServCine) { }
 
   ngOnInit(): void {
     this.cargarPeliculas();
     this.cargarSalas();
     this.cargarAsignaciones();
   }
-getNombrePelicula(id: number): string {
-  const peli = this.peliculas.find(p => p.id_pelicula === id);
-  return peli ? peli.nombre : 'N/A';
-}
-getNombreSala(id: number): string {
-  const sala = this.salas.find(s => s.id_sala === id);
-  return sala ? sala.nombre : 'N/A';
-}
-cargarPeliculas() {
-  this.api.getPeliculas().subscribe({
-    next: (data: any) => {
-      this.peliculas = data.filter((p: any) => p.estado);
-      this.cdr.detectChanges();
-    },
-    error: (err: any) => {
-      console.error(err);
-      this.cdr.detectChanges();
-    }
-  });
-}
+  getNombrePelicula(id: number): string {
+    const peli = this.peliculas.find(p => p.id_pelicula === id);
+    return peli ? peli.nombre : 'N/A';
+  }
+  getNombreSala(id: number): string {
+    const sala = this.salas.find(s => s.id_sala === id);
+    return sala ? sala.nombre : 'N/A';
+  }
+  cargarPeliculas() {
+    this.api.getPeliculas().subscribe({
+      next: (data: any) => {
+        this.peliculas = data.filter((p: any) => p.estado);
+        this.cdr.detectChanges();
+      },
+      error: (err: any) => {
+        console.error(err);
+        this.cdr.detectChanges();
+      }
+    });
+  }
 
-cargarSalas() {
-  this.api.getSalas().subscribe({
-    next: (data: any) => {
-      this.salas = data.filter((s: any) => s.estado);
-      this.cdr.detectChanges();
-    },
-    error: (err: any) => {
-      console.error(err);
-      this.cdr.detectChanges();
-    }
-  });
-}
+  cargarSalas() {
+    this.api.getSalas().subscribe({
+      next: (data: any) => {
+        this.salas = data.filter((s: any) => s.estado);
+        this.cdr.detectChanges();
+      },
+      error: (err: any) => {
+        console.error(err);
+        this.cdr.detectChanges();
+      }
+    });
+  }
 
-cargarAsignaciones() {
-  this.api.getCartelera().subscribe({
-    next: (data: any) => {
-      this.asignaciones = data;
-      this.cdr.detectChanges();
-    },
-    error: (err: any) => {
-      console.error(err);
-      this.cdr.detectChanges();
-    }
-  });
-}
+  cargarAsignaciones() {
+    this.api.getCartelera().subscribe({
+      next: (data: any) => {
+        this.asignaciones = data;
+        this.cdr.detectChanges();
+      },
+      error: (err: any) => {
+        console.error(err);
+        this.cdr.detectChanges();
+      }
+    });
+  }
 
   guardarAsignacion() {
-  if (
-    this.asignacionModel.id_pelicula === 0 ||
-    this.asignacionModel.id_sala === 0 ||
-    !this.asignacionModel.fecha_publicacion ||
-    !this.asignacionModel.fecha_fin
-  ) {
-    alert('Todos los campos son obligatorios');
-    return;
+    if (
+      this.asignacionModel.id_pelicula === 0 ||
+      this.asignacionModel.id_sala === 0 ||
+      !this.asignacionModel.fecha_publicacion ||
+      !this.asignacionModel.fecha_fin
+    ) {
+      alert('Todos los campos son obligatorios');
+      return;
+    }
+
+    if (this.isEdit) {
+
+      const data = {
+        idPelicula: this.asignacionModel.id_pelicula,
+        idSala: this.asignacionModel.id_sala,
+        fechaPublicacion: this.asignacionModel.fecha_publicacion,
+        fechaFin: this.asignacionModel.fecha_fin
+      };
+
+      this.api.actualizarCartelera(
+        this.asignacionModel.id_pelicula_sala,
+        data
+      ).subscribe({
+        next: () => {
+          this.cargarAsignaciones();
+          this.limpiar();
+        },
+        error: (err: any) => console.error(err)
+      });
+
+    } else {
+
+      const nuevaAsignacion = {
+        idPelicula: this.asignacionModel.id_pelicula,
+        idSala: this.asignacionModel.id_sala,
+        fechaPublicacion: this.asignacionModel.fecha_publicacion,
+        fechaFin: this.asignacionModel.fecha_fin
+      };
+
+      this.api.crearCartelera(nuevaAsignacion).subscribe({
+        next: () => {
+          this.cargarAsignaciones();
+          this.limpiar();
+        },
+        error: (err: any) => console.error(err)
+      });
+    }
   }
-
-  if (this.isEdit) {
-
-    this.api.actualizarCartelera(
-      this.asignacionModel.id_pelicula_sala,
-      this.asignacionModel
-    ).subscribe({
-      next: () => {
-        this.cargarAsignaciones();
-        this.limpiar();
-      },
-      error: (err: any) => console.error(err)
-    });
-
-  } else {
-
-    const nuevaAsignacion = {
-      id_pelicula: this.asignacionModel.id_pelicula,
-      id_sala: this.asignacionModel.id_sala,
-      fecha_publicacion: this.asignacionModel.fecha_publicacion,
-      fecha_fin: this.asignacionModel.fecha_fin,
-      estado: true
-    };
-
-    this.api.crearCartelera(nuevaAsignacion).subscribe({
-      next: () => {
-        this.cargarAsignaciones();
-        this.limpiar();
-      },
-      error: (err: any) => console.error(err)
-    });
-  }
-}
   // Editar asignación
   editarAsignacion(asignacion: any) {
     this.asignacionModel = { ...asignacion };
@@ -132,14 +138,16 @@ cargarAsignaciones() {
 
   }
 
-  eliminarAsignacion(asignacion: any) {
-    if (confirm(`¿Seguro que quieres eliminar esta asignación?`)) {
-      this.api.actualizarCartelera(asignacion.id_pelicula_sala, { ...asignacion, estado: false }).subscribe({
-        next: () => this.cargarAsignaciones()
-      });
-    }
-  }
+eliminarAsignacion(asignacion: any) {
+  if (confirm(`¿Seguro que quieres eliminar esta asignación?`)) {
 
+    this.api.eliminarCartelera(asignacion.id_pelicula_sala).subscribe({
+      next: () => this.cargarAsignaciones(),
+      error: (err: any) => console.error(err)
+    });
+
+  }
+}
   limpiar() {
     this.asignacionModel = {
       id_pelicula_sala: 0,
@@ -151,21 +159,21 @@ cargarAsignaciones() {
     };
     this.isEdit = false;
   }
-asignacionesFiltradas() {
-  if (!this.searchText) {
-    return this.asignaciones;
+  asignacionesFiltradas() {
+    if (!this.searchText) {
+      return this.asignaciones;
+    }
+
+    const texto = this.searchText.toLowerCase();
+
+    return this.asignaciones.filter(asig => {
+      const nombrePelicula = this.getNombrePelicula(asig.id_pelicula).toLowerCase();
+      const nombreSala = this.getNombreSala(asig.id_sala).toLowerCase();
+
+      return (
+        nombrePelicula.includes(texto) ||
+        nombreSala.includes(texto)
+      );
+    });
   }
-
-  const texto = this.searchText.toLowerCase();
-
-  return this.asignaciones.filter(asig => {
-    const nombrePelicula = this.getNombrePelicula(asig.id_pelicula).toLowerCase();
-    const nombreSala = this.getNombreSala(asig.id_sala).toLowerCase();
-
-    return (
-      nombrePelicula.includes(texto) ||
-      nombreSala.includes(texto)
-    );
-  });
-}
 }
